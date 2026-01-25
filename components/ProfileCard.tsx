@@ -50,7 +50,7 @@ export default function ProfileCard() {
         </div>
 
         {/* Connect Links */}
-        <div className="space-y-4">
+        <div id="connect" className="space-y-4 scroll-mt-24">
           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest">
             Connect
           </h3>

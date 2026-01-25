@@ -13,7 +13,7 @@ export default function Header() {
               deployed_code
             </span>
           </div>
-          <span className="text-xl font-bold tracking-tight">Web Profile Adhitama</span>
+          <span className="text-xl font-bold tracking-tight">Adhitama Profile</span>
         </div>
 
         {/* Navigation Links */}
@@ -45,7 +45,16 @@ export default function Header() {
         </div>
 
         {/* CTA Button */}
-        <button className="btn-primary">Connect</button>
+        <a 
+          href="#connect" 
+          className="btn-primary cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Connect
+        </a>
       </nav>
     </header>
   );
