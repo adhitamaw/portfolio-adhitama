@@ -9,15 +9,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Power BI Dashboard - Car Sales",
-    description:
-      "Interactive Power BI dashboard for car sales analysis and visualization. Built during Data Analyst & Visualization Bootcamp by DS AREA.",
-    technologies: ["Power BI", "Python", "Excel"],
-    year: "2025",
-    type: "Bootcamp - DS AREA",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiZGZhNzdhZTMtODRkYi00ZDE2LTljZTMtZDQ1MzRlY2M0NzZiIiwidCI6IjkwYWZmZTBmLWMyYTMtNDEwOC1iYjk4LTZjZWI0ZTk0ZWYxNSIsImMiOjEwfQ%3D%3D&pageName=25c483cb56256dcc3111",
-  },
-  {
     title: "Network Anomaly Detection using Q-Learning & DQN",
     description:
       "Research evaluating Q-Learning and Deep Q-Learning for adaptive network anomaly detection using UNSW-NB15 dataset. DQN achieved 99.09% accuracy and 0.9918 F1-score, demonstrating strong generalization against novel threats.",
@@ -59,6 +50,31 @@ export default function Projects() {
           folder_special
         </span>
         <h2 className="text-2xl font-bold">Projects</h2>
+      </div>
+
+      {/* Power BI Dashboard Embed */}
+      <div className="glass-card p-6 rounded-2xl">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+          <div>
+            <h3 className="font-bold text-lg text-primary">
+              Power BI Dashboard - Car Sales
+            </h3>
+            <p className="text-xs text-slate-400 font-medium">Interactive Dashboard • Bootcamp - DS AREA • 2025</p>
+          </div>
+        </div>
+        <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: '56.25%' }}>
+          <iframe 
+            title="Car Sales Dashboard" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiZGZhNzdhZTMtODRkYi00ZDE2LTljZTMtZDQ1MzRlY2M0NzZiIiwidCI6IjkwYWZmZTBmLWMyYTMtNDEwOC1iYjk4LTZjZWI0ZTk0ZWYxNSIsImMiOjEwfQ%3D%3D" 
+            className="absolute top-0 left-0 w-full h-full border-0 rounded-xl"
+            allowFullScreen={true}
+          />
+        </div>
+        <div className="flex flex-wrap items-center gap-2 mt-4">
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Power BI</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Excel</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-6">
