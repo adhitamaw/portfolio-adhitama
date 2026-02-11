@@ -6,34 +6,39 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    name: "MSIB Batch 6 - AI Backend Engineering",
-    icon: "smart_toy",
-    iconColor: "primary",
-  },
-  {
-    name: "Laravel Web Developer - Sanbercode",
-    icon: "code",
-    iconColor: "accent",
-  },
-  {
     name: "Certificate of Author - IEEE ICSECS 2025",
     icon: "article",
     iconColor: "primary",
   },
   {
-    name: "Internship Certificate - BP Batam",
-    icon: "work",
+    name: "Data Analytics and Visualization - Dsarea",
+    icon: "analytics",
+    iconColor: "accent",
+  },
+  {
+    name: "Intro to Data Analytics - RevoU Mini Course",
+    icon: "query_stats",
+    iconColor: "primary",
+  },
+  {
+    name: "MSIB Batch 6 - AI Backend Engineering",
+    icon: "smart_toy",
+    iconColor: "accent",
+  },
+  {
+    name: "Laravel Web Developer - Sanbercode",
+    icon: "code",
+    iconColor: "primary",
+  },
+  {
+    name: "ECCT English Communication Test (3.00/4.00)",
+    icon: "record_voice_over",
     iconColor: "accent",
   },
   {
     name: "EPRT English Test (473/677)",
     icon: "translate",
     iconColor: "primary",
-  },
-  {
-    name: "Intro to Data Analytics - RevoU",
-    icon: "analytics",
-    iconColor: "accent",
   },
 ];
 

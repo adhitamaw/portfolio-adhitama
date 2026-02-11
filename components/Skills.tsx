@@ -12,18 +12,22 @@ const frameworks = [
   "Power BI",
   "MySQL",
   "REST API",
+  "Data Cleaning",
+  "Data Visualization",
+  "Dashboard Development",
 ];
 
 const softSkills = [
-  "Creative Thinking",
-  "Critical Thinking",
-  "Collaboration & Teamwork",
-  "Time Management",
   "Analytical Thinking",
+  "Critical Thinking",
+  "Teamwork",
+  "Time Management",
 ];
 
 const tools = [
   "VS Code",
+  "Jupyter Notebook",
+  "Power BI",
   "Cursor AI",
   "GitHub",
   "MySQL",

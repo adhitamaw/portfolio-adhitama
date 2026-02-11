@@ -24,11 +24,11 @@ export default function Home() {
 
           {/* Main Content */}
           <div className="lg:col-span-8 space-y-16">
+            <Projects />
             <Education />
             <Timeline />
             <OrganizationalImpact />
             <Skills />
-            <Projects />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <Certifications />

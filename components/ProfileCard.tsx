@@ -35,11 +35,12 @@ export default function ProfileCard() {
             About Me
           </h3>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
-            A Bachelor&apos;s degree graduate in Informatics from Telkom University with a 
-            strong interest in Data Analysis, Data Engineering, Machine Learning, Web 
-            Development, and Backend Development. Proficient in Python, PHP, Golang, and Java 
-            with experience in web development and data processing. Currently seeking 
-            opportunities to further develop skills in a challenging environment.
+            Informatics graduate from Telkom University with strong interests in Data Analysis, 
+            Data Engineering, and Backend Development. Experienced as a Data Analyst & Engineer 
+            at Toyota Astra Motor and Backend Developer at BP Batam, with hands-on experience in 
+            data processing, dashboard development, API design, and database management. 
+            Proficient in Python, PHP, Golang, and Java, highly motivated to grow in a dynamic 
+            and challenging environment.
           </p>
         </div>
 

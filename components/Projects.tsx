@@ -9,36 +9,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Network Anomaly Detection using Q-Learning & DQN",
+    title: "Coffeskuy Website",
     description:
-      "Research evaluating Q-Learning and Deep Q-Learning for adaptive network anomaly detection using UNSW-NB15 dataset. DQN achieved 99.09% accuracy and 0.9918 F1-score, demonstrating strong generalization against novel threats.",
-    technologies: ["Python", "Machine Learning", "Deep Learning", "Q-Learning"],
-    year: "2025",
-    type: "Research - IEEE ICSECS",
-  },
-  {
-    title: "SANBERBOOK - Book Management Website",
-    description:
-      "A Laravel-based website to display and manage books with CRUD and authentication features. Includes admin and user roles with commenting functionality.",
+      "Developed a Laravel-based platform for discovering and reviewing cafes. Implemented rating, review, favorites, digital menu, and booking features. Integrated user and admin roles within a single ecosystem.",
     technologies: ["Laravel", "PHP", "MySQL", "Authentication"],
-    year: "2025",
-    type: "Bootcamp Project",
-  },
-  {
-    title: "CoffeSkuy - Cafe Discovery Platform",
-    description:
-      "A Laravel-based website designed to find and explore the best cafes. Features include reviewing, rating, favoriting, digital menus, geolocation support, and booking system.",
-    technologies: ["Laravel", "PHP", "MySQL", "Geolocation API"],
     year: "2024",
-    type: "University Project",
-  },
-  {
-    title: "SPPD Mobile Application - BP Batam",
-    description:
-      "Backend development for BP Batam's SPPD Mobile Application, including API development and database design and management.",
-    technologies: ["REST API", "Database Design", "Backend Development"],
-    year: "2024",
-    type: "Internship Project",
+    type: "Campus Project - Telkom University",
   },
 ];
 
@@ -57,9 +33,9 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
           <div>
             <h3 className="font-bold text-lg text-primary">
-              Power BI Dashboard - Car Sales
+              Car Sales Dashboard
             </h3>
-            <p className="text-xs text-slate-400 font-medium">Interactive Dashboard • Bootcamp - DS AREA • 2025</p>
+            <p className="text-xs text-slate-400 font-medium">Data Analyst & Visualization Bootcamp by DS AREA</p>
           </div>
         </div>
         <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: '56.25%' }}>
@@ -70,10 +46,133 @@ export default function Projects() {
             allowFullScreen={true}
           />
         </div>
-        <div className="flex flex-wrap items-center gap-2 mt-4">
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Power BI</span>
+        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4 mt-4">
+          Developed an interactive car sales dashboard using Power BI to analyze sales performance from 2022 to 2025. 
+          The dashboard provides insights into revenue trends, units sold, top-performing brands, dealers, and salespersons, 
+          as well as customer demographics, body style preferences, and payment methods. Through data cleaning, modeling, 
+          and effective visualization, this dashboard supports performance monitoring and data-driven decision making.
+        </p>
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Power BI</span>
           <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Excel</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Excel</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Critical Thinking</span>
+        </div>
+        
+        {/* PDF Viewer */}
+        <div className="mt-6">
+          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+            Portfolio Documentation
+          </h4>
+          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+            <iframe 
+              src="/Data Analyst Car Sales Portofolio_compressed.pdf"
+              className="absolute top-0 left-0 w-full h-full"
+              title="Car Sales Portfolio PDF"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* RevoU Mini Course Project */}
+      <div className="glass-card p-6 rounded-2xl">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+          <div>
+            <h3 className="font-bold text-lg text-primary">
+              RevoU Mini Course Project - Intro to Data Analytics
+            </h3>
+            <p className="text-xs text-slate-400 font-medium">Data Analytics Mini Course • RevoU • 2026</p>
+          </div>
+        </div>
+        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
+          Conducted data evaluation on a bakery's sales performance using transaction datasets from January 2021. 
+          The analysis successfully identified key trends, such as peak sales periods and the best-selling product 
+          (Traditional Baguette), and generated data-driven strategy recommendations to optimize weekend production 
+          and minimize operational waste through more accurate inventory management.
+        </p>
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analytics</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analysis</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Visualization</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Excel</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Spreadsheets</span>
+        </div>
+        
+        {/* PDF Viewer */}
+        <div className="mt-6">
+          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+            Analysis Documentation
+          </h4>
+          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+            <iframe 
+              src="/Adhitama Wichaksono_Analisis Tren Penjualan Bakery.pdf"
+              className="absolute top-0 left-0 w-full h-full"
+              title="Bakery Sales Analysis PDF"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* IEEE Conference Paper */}
+      <div className="glass-card p-6 rounded-2xl">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+          <div>
+            <h3 className="font-bold text-lg text-primary">
+              Network Anomaly Detection for Intrusion Detection Systems Using Q-Learning and Deep Q-Learning
+            </h3>
+            <p className="text-xs text-slate-400 font-medium">IEEE ICSECS Conference • 2025</p>
+          </div>
+        </div>
+        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
+          Research evaluating Q-Learning and Deep Q-Learning (DQN) for adaptive network anomaly detection using the UNSW-NB15 dataset. 
+          Addressing data imbalance via SMOTE-Tomek, it simulates zero-day scenarios by excluding specific attacks. DQN outperformed 
+          Q-Learning, achieving 99.09% accuracy and 0.9918 F1-score. The model demonstrated strong generalization against novel threats 
+          with negligible performance drops, proving its effectiveness for securing modern network systems.
+        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div className="flex flex-wrap gap-2">
+            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
+            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Machine Learning</span>
+            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Deep Q-Learning</span>
+            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">SMOTE-Tomek</span>
+          </div>
+          <div className="flex gap-2">
+            <a
+              href="https://ieeexplore.ieee.org/document/11279087"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              View on IEEE Xplore
+            </a>
+            <a
+              href="https://github.com/adhitamaw/Anomaly-Detection-using-Reinforcement-Learning"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">code</span>
+              GitHub
+            </a>
+          </div>
+        </div>
+        
+        {/* PDF Viewer */}
+        <div className="mt-6">
+          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary text-lg">slideshow</span>
+            Conference Presentation
+          </h4>
+          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+            <iframe 
+              src="/Conference Adhit icsecs 2025 (4)_compressed.pdf"
+              className="absolute top-0 left-0 w-full h-full"
+              title="IEEE ICSECS Conference Paper PDF"
+            />
+          </div>
         </div>
       </div>
 

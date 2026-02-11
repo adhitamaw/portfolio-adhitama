@@ -9,7 +9,7 @@ interface EducationItem {
 const educationItems: EducationItem[] = [
   {
     degree: "S1 Informatika",
-    institution: "Telkom University, Bandung",
+    institution: "Telkom University",
     year: "2021 — 2025 • GPA: 3.34",
     icon: "school",
     iconColor: "primary",

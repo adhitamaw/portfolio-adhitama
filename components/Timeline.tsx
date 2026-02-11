@@ -13,8 +13,8 @@ const careerTimeline: TimelineItem[] = [
     company: "PT. Toyota-Astra Motor",
     period: "Oct 2025 — Dec 2025",
     description:
-      "Responsible for improving, developing, and maintaining Sales and Aftersales Dashboard visualizations using Power BI Desktop in Fleet Management. Built and maintained data cleansing programs using Python to ensure data quality and consistency for optimal analysis.",
-    isCurrent: true,
+      "Developed and maintained Sales & Aftersales dashboards using Power BI to support fleet performance analysis. Built Python-based data cleansing pipelines to improve data accuracy and consistency. Supported data-driven decision-making through interactive and insightful visualizations.",
+    isCurrent: false,
     color: "primary",
   },
   {
@@ -22,25 +22,25 @@ const careerTimeline: TimelineItem[] = [
     company: "Sanbercode",
     period: "Feb 2025 — Mar 2025",
     description:
-      "Participated in a bootcamp with a final project of building SANBERBOOK website using Laravel with CRUD and authentication features. Implemented admin and user roles with full functionality.",
+      "Built SANBERBOOK, a Laravel-based web application with authentication and role-based access. Implemented CRUD features for admin and user roles.",
     isCurrent: false,
     color: "accent",
   },
   {
-    title: "Backend and Database Developer Intern",
+    title: "Backend Developer (Internship)",
     company: "BP Batam",
     period: "Jun 2024 — Aug 2024",
     description:
-      "Responsible for the development of SPPD Mobile Application, including API development as well as database design and management for BP Batam.",
+      "Designed and implemented APIs for the SPPD Mobile Application. Developed and managed MySQL databases, including schema design and data integration. Ensured seamless integration between mobile application and backend services.",
     isCurrent: false,
     color: "primary",
   },
   {
-    title: "AI Integration in Backend App Development",
-    company: "MSIB 6 Kampus Merdeka - Ruangguru",
+    title: "Backend Application Development",
+    company: "Kampus Merdeka x Ruangguru",
     period: "Feb 2024 — Jun 2024",
     description:
-      "Completed the Certified Independent Study Internship Program (Batch 6) with a focus on AI integration in backend application development using Golang.",
+      "Implemented JWT-based authentication middleware in a Golang backend to enhance user access security. Developed four secure and efficient backend API endpoints to support data management and processing.",
     isCurrent: false,
     color: "accent",
   },
