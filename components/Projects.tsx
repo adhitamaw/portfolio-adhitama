@@ -61,14 +61,25 @@ export default function Projects() {
         
         {/* PDF Viewer */}
         <div className="mt-6">
-          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
-            Portfolio Documentation
-          </h4>
-          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+              Portfolio Documentation
+            </h4>
+            <a
+              href="/Data Analyst Car Sales Portofolio_compressed.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              Open PDF
+            </a>
+          </div>
+          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
             <iframe 
               src="/Data Analyst Car Sales Portofolio_compressed.pdf"
-              className="absolute top-0 left-0 w-full h-full"
+              className="w-full h-full"
               title="Car Sales Portfolio PDF"
             />
           </div>
@@ -101,14 +112,25 @@ export default function Projects() {
         
         {/* PDF Viewer */}
         <div className="mt-6">
-          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
-            Analysis Documentation
-          </h4>
-          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+              Analysis Documentation
+            </h4>
+            <a
+              href="/Adhitama Wichaksono_Analisis Tren Penjualan Bakery.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              Open PDF
+            </a>
+          </div>
+          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
             <iframe 
               src="/Adhitama Wichaksono_Analisis Tren Penjualan Bakery.pdf"
-              className="absolute top-0 left-0 w-full h-full"
+              className="w-full h-full"
               title="Bakery Sales Analysis PDF"
             />
           </div>
@@ -162,14 +184,25 @@ export default function Projects() {
         
         {/* PDF Viewer */}
         <div className="mt-6">
-          <h4 className="text-sm font-bold text-slate-300 mb-3 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-lg">slideshow</span>
-            Conference Presentation
-          </h4>
-          <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ height: '600px' }}>
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary text-lg">slideshow</span>
+              Conference Presentation
+            </h4>
+            <a
+              href="/Conference Adhit icsecs 2025 (4)_compressed.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              Open PDF
+            </a>
+          </div>
+          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
             <iframe 
               src="/Conference Adhit icsecs 2025 (4)_compressed.pdf"
-              className="absolute top-0 left-0 w-full h-full"
+              className="w-full h-full"
               title="IEEE ICSECS Conference Paper PDF"
             />
           </div>
