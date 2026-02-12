@@ -33,9 +33,9 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
           <div>
             <h3 className="font-bold text-lg text-primary">
-              Car Sales Dashboard
+              Car Sales Performance Dashboard
             </h3>
-            <p className="text-xs text-slate-400 font-medium">Data Analyst & Visualization Bootcamp by DS AREA</p>
+            <p className="text-xs text-slate-400 font-medium">Data Analytics & Visualization Project | Power BI | 2026</p>
           </div>
         </div>
         <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: '56.25%' }}>
@@ -46,12 +46,18 @@ export default function Projects() {
             allowFullScreen={true}
           />
         </div>
-        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4 mt-4">
-          Developed an interactive car sales dashboard using Power BI to analyze sales performance from 2022 to 2025. 
-          The dashboard provides insights into revenue trends, units sold, top-performing brands, dealers, and salespersons, 
-          as well as customer demographics, body style preferences, and payment methods. Through data cleaning, modeling, 
-          and effective visualization, this dashboard supports performance monitoring and data-driven decision making.
-        </p>
+        <div className="mt-4 mb-4">
+          <ul className="space-y-2">
+            <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
+              <span className="text-primary mt-1 flex-shrink-0">•</span>
+              <span>Built comprehensive Power BI dashboard tracking total sales, revenue, customer metrics, and trend analysis</span>
+            </li>
+            <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
+              <span className="text-primary mt-1 flex-shrink-0">•</span>
+              <span>Implemented dynamic filters and drill-down capabilities for granular performance insights across regions and time periods</span>
+            </li>
+          </ul>
+        </div>
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Power BI</span>
           <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
@@ -91,17 +97,21 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
           <div>
             <h3 className="font-bold text-lg text-primary">
-              RevoU Mini Course Project - Intro to Data Analytics
+              Bakery Sales Data Analysis
             </h3>
-            <p className="text-xs text-slate-400 font-medium">Data Analytics Mini Course • RevoU • 2026</p>
+            <p className="text-xs text-slate-400 font-medium">RevoU Mini Course Project – Intro to Data Analytics | Excel | 2026</p>
           </div>
         </div>
-        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
-          Conducted data evaluation on a bakery's sales performance using transaction datasets from January 2021. 
-          The analysis successfully identified key trends, such as peak sales periods and the best-selling product 
-          (Traditional Baguette), and generated data-driven strategy recommendations to optimize weekend production 
-          and minimize operational waste through more accurate inventory management.
-        </p>
+        <ul className="space-y-2 mb-4">
+          <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
+            <span className="text-primary mt-1 flex-shrink-0">•</span>
+            <span>Analyzed January 2021 bakery transaction data to identify peak sales periods and best-selling product (Traditional Baguette)</span>
+          </li>
+          <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
+            <span className="text-primary mt-1 flex-shrink-0">•</span>
+            <span>Delivered data-driven recommendations to optimize weekend production and improve inventory management to reduce operational waste</span>
+          </li>
+        </ul>
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analytics</span>
           <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analysis</span>

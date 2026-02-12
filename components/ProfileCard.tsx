@@ -32,15 +32,15 @@ export default function ProfileCard() {
         <div className="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
           <h3 className="text-sm font-bold text-slate-400 uppercase mb-3 flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">person</span>
-            About Me
+            Professional Summary
           </h3>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
-            Informatics graduate from Telkom University with strong interests in Data Analysis, 
-            Data Engineering, and Backend Development. Experienced as a Data Analyst & Engineer 
-            at Toyota Astra Motor and Backend Developer at BP Batam, with hands-on experience in 
-            data processing, dashboard development, API design, and database management. 
-            Proficient in Python, PHP, Golang, and Java, highly motivated to grow in a dynamic 
-            and challenging environment.
+            Informatics graduate from Telkom University with a strong analytical and technical background in Data Analytics, 
+            Data Engineering, and Backend Development. Experienced as a Data Analyst & Engineer at Toyota Astra Motor, 
+            contributing to data-driven decision-making through Power BI dashboards and Python-based ETL pipelines. 
+            Proficient in Python, PHP, Golang, and Java with solid analytical skills, as well as experience in coordinating 
+            and collaborating on academic team projects. Seeking challenging career opportunities to leverage technical expertise 
+            and an analytical mindset to contribute to organizational performance and business growth.
           </p>
         </div>
 

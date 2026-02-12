@@ -7,33 +7,35 @@ const programmingLanguages = [
   "C",
 ];
 
-const frameworks = [
-  "Laravel",
+const dataAnalytics = [
   "Power BI",
-  "MySQL",
-  "REST API",
-  "Data Cleaning",
-  "Data Visualization",
-  "Dashboard Development",
-];
-
-const softSkills = [
-  "Analytical Thinking",
-  "Critical Thinking",
-  "Teamwork",
-  "Time Management",
-];
-
-const tools = [
-  "VS Code",
   "Jupyter Notebook",
-  "Power BI",
-  "Cursor AI",
-  "GitHub",
+  "SQL",
+  "Data Cleaning",
+  "ETL Pipelines",
+];
+
+const databaseManagement = [
   "MySQL",
-  "Microsoft Office",
-  "Canva",
-  "Figma",
+  "Database Design",
+  "Query Optimization",
+];
+
+const webDevelopment = [
+  "Laravel",
+  "RESTful API Design",
+  "JWT Authentication",
+];
+
+const developmentTools = [
+  "Visual Studio Code",
+  "GitHub",
+  "Cursor AI",
+];
+
+const languages = [
+  "Indonesian (Native)",
+  "English (Professional – EPRT Score: 473/677)",
 ];
 
 export default function Skills() {
@@ -62,14 +64,14 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Frameworks & Tools */}
+        {/* Data Analytics & Visualization */}
         <div className="glass-card p-6 rounded-2xl">
           <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">terminal</span>
-            Frameworks & Technologies
+            <span className="material-symbols-outlined text-sm">analytics</span>
+            Data Analytics & Visualization
           </p>
           <div className="flex flex-wrap gap-2">
-            {frameworks.map((skill) => (
+            {dataAnalytics.map((skill) => (
               <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
                 {skill}
               </span>
@@ -77,37 +79,61 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Soft Skills */}
+        {/* Database Management */}
         <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-accent mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">groups</span>
-            Soft Skills
+          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">storage</span>
+            Database Management
           </p>
           <div className="flex flex-wrap gap-2">
-            {softSkills.map((skill) => (
-              <span
-                key={skill}
-                className="glass-pill-purple px-3 py-1.5 rounded-lg text-xs"
-              >
+            {databaseManagement.map((skill) => (
+              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
                 {skill}
               </span>
             ))}
           </div>
         </div>
 
-        {/* Tools & Software */}
+        {/* Web Development & APIs */}
         <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">build</span>
-            Tools & Software
+          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">api</span>
+            Web Development & APIs
           </p>
           <div className="flex flex-wrap gap-2">
-            {tools.map((item) => (
-              <span
-                key={item}
-                className="glass-pill-neutral px-3 py-1.5 rounded-lg text-xs"
-              >
-                {item}
+            {webDevelopment.map((skill) => (
+              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Development Tools */}
+        <div className="glass-card p-6 rounded-2xl">
+          <p className="text-xs font-bold text-accent mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">build</span>
+            Development Tools
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {developmentTools.map((tool) => (
+              <span key={tool} className="glass-pill-purple px-3 py-1.5 rounded-lg text-xs">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div className="glass-card p-6 rounded-2xl">
+          <p className="text-xs font-bold text-accent mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">translate</span>
+            Languages
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {languages.map((lang) => (
+              <span key={lang} className="glass-pill-purple px-3 py-1.5 rounded-lg text-xs">
+                {lang}
               </span>
             ))}
           </div>

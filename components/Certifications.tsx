@@ -6,38 +6,28 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    name: "Certificate of Author - IEEE ICSECS 2025",
+    name: "IEEE 9th International Conference on Software Engineering & Computer Systems (ICSECS) - Published Author (2025)",
     icon: "article",
     iconColor: "primary",
   },
   {
-    name: "Data Analytics and Visualization - Dsarea",
+    name: "Data Analytics and Visualization Bootcamp - Dsarea (2026)",
     icon: "analytics",
     iconColor: "accent",
   },
   {
-    name: "Intro to Data Analytics - RevoU Mini Course",
-    icon: "query_stats",
-    iconColor: "primary",
-  },
-  {
-    name: "MSIB Batch 6 - AI Backend Engineering",
+    name: "Kampus Merdeka Batch 6 - AI Integration in Backend Application Development (2024)",
     icon: "smart_toy",
-    iconColor: "accent",
-  },
-  {
-    name: "Laravel Web Developer - Sanbercode",
-    icon: "code",
     iconColor: "primary",
   },
   {
-    name: "ECCT English Communication Test (3.00/4.00)",
-    icon: "record_voice_over",
+    name: "Laravel 11 Web Developer Bootcamp - Sanbercode (2025)",
+    icon: "code",
     iconColor: "accent",
   },
   {
-    name: "EPRT English Test (473/677)",
-    icon: "translate",
+    name: "Introduction to Data Analytics - RevoU Mini Course (2026)",
+    icon: "query_stats",
     iconColor: "primary",
   },
 ];

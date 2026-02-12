@@ -1,46 +1,50 @@
 interface TimelineItem {
   title: string;
   company: string;
+  location: string;
   period: string;
-  description: string;
+  responsibilities: string[];
   isCurrent: boolean;
   color: "primary" | "accent";
 }
 
 const careerTimeline: TimelineItem[] = [
   {
-    title: "Data Analyst & Engineer - Fleet Management",
+    title: "Data Analyst & Engineer – Fleet Management (Internship)",
     company: "PT. Toyota-Astra Motor",
-    period: "Oct 2025 — Dec 2025",
-    description:
-      "Developed and maintained Sales & Aftersales dashboards using Power BI to support fleet performance analysis. Built Python-based data cleansing pipelines to improve data accuracy and consistency. Supported data-driven decision-making through interactive and insightful visualizations.",
+    location: "Jakarta, Indonesia",
+    period: "October 2025 — December 2025",
+    responsibilities: [
+      "Developed and maintained interactive Sales & Aftersales dashboards using Power BI to support fleet performance analysis and strategic decision-making for fleet management operations",
+      "Built Python-based data cleansing pipelines to improve data accuracy and ensure consistency across multiple systems",
+      "Collaborated with cross-functional teams to translate business requirements into actionable data insights through interactive visualizations"
+    ],
     isCurrent: false,
     color: "primary",
-  },
-  {
-    title: "Laravel 11 Web Developer Bootcamp",
-    company: "Sanbercode",
-    period: "Feb 2025 — Mar 2025",
-    description:
-      "Built SANBERBOOK, a Laravel-based web application with authentication and role-based access. Implemented CRUD features for admin and user roles.",
-    isCurrent: false,
-    color: "accent",
   },
   {
     title: "Backend Developer (Internship)",
-    company: "BP Batam",
-    period: "Jun 2024 — Aug 2024",
-    description:
-      "Designed and implemented APIs for the SPPD Mobile Application. Developed and managed MySQL databases, including schema design and data integration. Ensured seamless integration between mobile application and backend services.",
+    company: "Badan Pengusahaan Batam (BP Batam)",
+    location: "Batam, Indonesia",
+    period: "June 2024 — August 2024",
+    responsibilities: [
+      "Designed and implemented APIs for SPPD Mobile Application, streamlining travel request processes",
+      "Developed and optimized MySQL database architecture, including schema design, indexing, and data integration to ensure efficient data retrieval and system performance",
+      "Ensured seamless integration between mobile frontend and backend services through comprehensive testing and optimization"
+    ],
     isCurrent: false,
     color: "primary",
   },
   {
-    title: "Backend Application Development",
-    company: "Kampus Merdeka x Ruangguru",
-    period: "Feb 2024 — Jun 2024",
-    description:
-      "Implemented JWT-based authentication middleware in a Golang backend to enhance user access security. Developed four secure and efficient backend API endpoints to support data management and processing.",
+    title: "AI Integration In Backend Application Development (Independent Study Program)",
+    company: "Kampus Merdeka (MSIB 6) x Ruangguru",
+    location: "Remote",
+    period: "February 2024 — June 2024",
+    responsibilities: [
+      "Implemented JWT-based authentication middleware in Golang backend, enhancing application security and user access management",
+      "Developed 4 secure and efficient RESTful API endpoints for data management, processing, and user operations",
+      "Participated in code reviews and agile development practices, improving code quality and team collaboration"
+    ],
     isCurrent: false,
     color: "accent",
   },
@@ -78,15 +82,21 @@ export default function Timeline() {
                 <span
                   className={`text-xs font-bold ${
                     item.isCurrent ? "text-primary" : "text-slate-500"
-                  }`}
+                  } whitespace-nowrap ml-4`}
                 >
                   {item.period}
                 </span>
               </div>
-              <p className="text-slate-400 text-sm mb-3">{item.company}</p>
-              <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                {item.description}
-              </p>
+              <p className="text-slate-400 text-sm mb-1">{item.company}</p>
+              <p className="text-slate-500 text-xs mb-4">{item.location}</p>
+              <ul className="space-y-2">
+                {item.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed">
+                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                    <span>{resp}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
