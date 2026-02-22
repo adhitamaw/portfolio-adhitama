@@ -9,12 +9,31 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Coffeskuy Website",
+    title: "SPPD (Surat Perintah Perjalanan Dinas) Mobile – BP Batam",
     description:
-      "Developed a Laravel-based platform for discovering and reviewing cafes. Implemented rating, review, favorites, digital menu, and booking features. Integrated user and admin roles within a single ecosystem.",
-    technologies: ["Laravel", "PHP", "MySQL", "Authentication"],
+      "Official duty travel management system developed using Flutter, integrated with a PHP backend and MySQL database. Designed to streamline official travel administration processes, including SPPD creation, companion management, and travel expense calculation.",
+    technologies: ["Flutter", "PHP", "MySQL", "REST API"],
     year: "2024",
-    type: "Campus Project - Telkom University",
+    type: "BP Batam Internship Project",
+    link: "https://github.com/adhitamaw/sppd",
+  },
+  {
+    title: "Task Tracker Plus",
+    description:
+      "Web-based task management application built using Go (Golang). Helps users organize tasks through category management, priority levels, and deadline tracking. Implements Monolithic Architecture using RESTful API and follows the MVC (Model-View-Controller) design pattern.",
+    technologies: ["Go (Golang)", "REST API", "MVC", "PostgreSQL"],
+    year: "2024",
+    type: "MSIB 6 Ruangguru Project",
+    link: "https://github.com/adhitamaw/task-tracker-plus-go",
+  },
+  {
+    title: "AI Model App: Translate & Chat",
+    description:
+      "Web-based application built with Go that integrates various AI models from Hugging Face for translation, chat/question-answering, and text processing. Features JWT-authenticated endpoints and clean architecture backend.",
+    technologies: ["Go (Golang)", "HuggingFace API", "JWT", "REST API"],
+    year: "2024",
+    type: "MSIB 6 Ruangguru Project",
+    link: "https://github.com/adhitamaw/ai-model-app-using-golang",
   },
 ];
 

@@ -1,28 +1,38 @@
 const programmingLanguages = [
   "Python",
-  "PHP",
+  "SQL",
   "Golang",
-  "Java",
+  "PHP",
   "C++",
-  "C",
 ];
 
 const dataAnalytics = [
+  "EDA",
+  "Data Cleaning & Preprocessing",
+  "Predictive Analytics",
   "Power BI",
-  "Jupyter Notebook",
-  "SQL",
-  "Data Cleaning",
-  "ETL Pipelines",
+  "Data Visualization",
+];
+
+const businessAnalytics = [
+  "KPI Analysis",
+  "Business Reporting",
+  "Data Visualization",
 ];
 
 const databaseManagement = [
   "MySQL",
-  "Database Design",
-  "Query Optimization",
+  "PostgreSQL",
+];
+
+const dataEngineering = [
+  "Data Pipeline Development",
+  "REST API Integration",
 ];
 
 const webDevelopment = [
   "Laravel",
+  "Go (Golang)",
   "RESTful API Design",
   "JWT Authentication",
 ];
@@ -30,12 +40,11 @@ const webDevelopment = [
 const developmentTools = [
   "Visual Studio Code",
   "GitHub",
-  "Cursor AI",
 ];
 
 const languages = [
   "Indonesian (Native)",
-  "English (Professional – EPRT Score: 473/677)",
+  "English (Professional)",
 ];
 
 export default function Skills() {
@@ -53,7 +62,7 @@ export default function Skills() {
         <div className="glass-card p-6 rounded-2xl">
           <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">code</span>
-            Programming Languages
+            Programming & Data Processing
           </p>
           <div className="flex flex-wrap gap-2">
             {programmingLanguages.map((skill) => (
@@ -68,10 +77,25 @@ export default function Skills() {
         <div className="glass-card p-6 rounded-2xl">
           <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">analytics</span>
-            Data Analytics & Visualization
+            Data & Analytics
           </p>
           <div className="flex flex-wrap gap-2">
             {dataAnalytics.map((skill) => (
+              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Business Analytics */}
+        <div className="glass-card p-6 rounded-2xl">
+          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">bar_chart</span>
+            Business Analytics
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {businessAnalytics.map((skill) => (
               <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
                 {skill}
               </span>
@@ -83,10 +107,25 @@ export default function Skills() {
         <div className="glass-card p-6 rounded-2xl">
           <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">storage</span>
-            Database Management
+            Database
           </p>
           <div className="flex flex-wrap gap-2">
             {databaseManagement.map((skill) => (
+              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Data Engineering */}
+        <div className="glass-card p-6 rounded-2xl">
+          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
+            <span className="material-symbols-outlined text-sm">hub</span>
+            Data Engineering
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {dataEngineering.map((skill) => (
               <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
                 {skill}
               </span>
@@ -98,7 +137,7 @@ export default function Skills() {
         <div className="glass-card p-6 rounded-2xl">
           <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">api</span>
-            Web Development & APIs
+            Web & Backend
           </p>
           <div className="flex flex-wrap gap-2">
             {webDevelopment.map((skill) => (

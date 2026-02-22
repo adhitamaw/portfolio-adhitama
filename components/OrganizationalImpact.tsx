@@ -9,27 +9,27 @@ interface ImpactItem {
 
 const impactItems: ImpactItem[] = [
   {
-    title: "Carnival 2023",
-    role: "Logistics Team Member",
-    organization: "HIMAIF (Informatics Student Association)",
+    title: "Carnival HIMAIF (Informatics, Telkom University)",
+    role: "Logistics Division Staff",
+    organization: "HIMAIF (Himpunan Mahasiswa Informatika)",
     location: "Telkom University",
     period: "October 2023 — November 2023",
     responsibilities: [
-      "Managed building and field permits for large-scale university carnival event",
-      "Coordinated logistics operations including equipment procurement, vendor management, and distribution of event materials",
-      "Collaborated with cross-functional committee members and external stakeholders to ensure successful event execution on time and within budget"
+      "Managed venue and field permits for a large-scale university carnival event",
+      "Coordinated logistics operations, including equipment procurement, vendor management, and distribution of event materials",
+      "Collaborated with cross-functional committees and external stakeholders to ensure the event was executed on time and within budget"
     ],
   },
   {
     title: "Batavia On Telkom (Cultural Festival)",
-    role: "Logistics Team Member",
+    role: "Logistics Division Staff",
     organization: "Telkom University",
     location: "Telkom University",
     period: "October 2022 — June 2023",
     responsibilities: [
-      "Secured venue permits and managed relationships with vendors for cultural festival event",
-      "Procured and organized event requirements, ensuring smooth operations across multiple event days",
-      "Demonstrated strong teamwork and coordination skills in managing logistics for major university cultural event"
+      "Secured venue permits and maintained vendor coordination for a university cultural festival",
+      "Managed procurement and organization of event resources to ensure smooth multi-day operations",
+      "Demonstrated strong teamwork and coordination skills in handling logistics for a major university event"
     ],
   },
 ];

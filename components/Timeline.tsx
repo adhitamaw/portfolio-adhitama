@@ -15,9 +15,10 @@ const careerTimeline: TimelineItem[] = [
     location: "Jakarta, Indonesia",
     period: "October 2025 — December 2025",
     responsibilities: [
-      "Developed and maintained interactive Sales & Aftersales dashboards using Power BI to support fleet performance analysis and strategic decision-making for fleet management operations",
-      "Built Python-based data cleansing pipelines to improve data accuracy and ensure consistency across multiple systems",
-      "Collaborated with cross-functional teams to translate business requirements into actionable data insights through interactive visualizations"
+      "Developed and maintained interactive Sales & Aftersales dashboards using Power BI to monitor fleet performance, sales trends, and operational KPIs, reducing dashboard load time from ~45 seconds to 10 seconds by optimizing the data model, minimizing unnecessary calculated columns, and refining DAX measures",
+      "Designed and implemented reusable Python-based data cleansing pipelines to automate preprocessing workflows and improve data accuracy and consistency across multiple data sources",
+      "Collaborated with cross-functional teams to identify business requirements and translate them into insightful visualizations that support data-driven decision-making",
+      "Performed regular data updates, validation, and maintenance to ensure data quality, reliability, and consistency in supporting operational activities and business analysis"
     ],
     isCurrent: false,
     color: "primary",
@@ -28,22 +29,24 @@ const careerTimeline: TimelineItem[] = [
     location: "Batam, Indonesia",
     period: "June 2024 — August 2024",
     responsibilities: [
-      "Designed and implemented APIs for SPPD Mobile Application, streamlining travel request processes",
-      "Developed and optimized MySQL database architecture, including schema design, indexing, and data integration to ensure efficient data retrieval and system performance",
-      "Ensured seamless integration between mobile frontend and backend services through comprehensive testing and optimization"
+      "Developed 10 RESTful APIs using PHP and MySQL to support the SPPD management system, handling official travel records, employee data, participants, and expense transactions",
+      "Designed a MySQL database with an integrated table structure and optimized queries to improve data access efficiency in backend services",
+      "Implemented API security through parameterized queries to prevent SQL injection, CORS configuration, and standardized structured JSON responses",
+      "Collaborated with front-end developers to integrate APIs and implement business logic to maintain data integrity"
     ],
     isCurrent: false,
     color: "primary",
   },
   {
     title: "AI Integration In Backend Application Development (Independent Study Program)",
-    company: "Kampus Merdeka (MSIB 6) x Ruangguru",
+    company: "Ruangguru, Kampus Merdeka (MSIB 6)",
     location: "Remote",
     period: "February 2024 — June 2024",
     responsibilities: [
-      "Implemented JWT-based authentication middleware in Golang backend, enhancing application security and user access management",
-      "Developed 4 secure and efficient RESTful API endpoints for data management, processing, and user operations",
-      "Participated in code reviews and agile development practices, improving code quality and team collaboration"
+      "Developed RESTful backend services using Golang by applying clean architecture principles, middleware, and modular error handling",
+      "Designed and optimized PostgreSQL databases through normalization, indexing, and query optimization (JOIN), integrated using ORM (GORM) for efficient data management",
+      "Implemented JWT-based authentication and authorization to secure application endpoints",
+      "Integrated AI models (HuggingFace) into the Golang backend to develop text translation and AI-powered chat features via REST API"
     ],
     isCurrent: false,
     color: "accent",

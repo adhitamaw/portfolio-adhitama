@@ -35,12 +35,12 @@ export default function ProfileCard() {
             Professional Summary
           </h3>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
-            Informatics graduate from Telkom University with a strong analytical and technical background in Data Analytics, 
-            Data Engineering, and Backend Development. Experienced as a Data Analyst & Engineer at Toyota Astra Motor, 
-            contributing to data-driven decision-making through Power BI dashboards and Python-based ETL pipelines. 
-            Proficient in Python, PHP, Golang, and Java with solid analytical skills, as well as experience in coordinating 
-            and collaborating on academic team projects. Seeking challenging career opportunities to leverage technical expertise 
-            and an analytical mindset to contribute to organizational performance and business growth.
+            Fresh Graduate in Informatics from Telkom University (GPA 3.34) with a strong interest in Data Analysis, Data
+            Engineering, Backend Development, and Web Development. Experienced as an intern at Toyota Astra Motor and BP
+            Batam, and participated in the Kampus Merdeka program (MSIB 6). Proficient in Python, Go, PHP, C++, Laravel,
+            Power BI, and SQL, with strong analytical skills and proven ability to collaborate effectively in team-based
+            projects. Ready to contribute professionally by leveraging technical expertise and an analytical mindset to
+            support team performance and drive business growth.
           </p>
         </div>
 
