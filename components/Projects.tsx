@@ -47,6 +47,52 @@ export default function Projects() {
         <h2 className="text-2xl font-bold">Projects</h2>
       </div>
 
+      {/* Toyota Internship Power BI Dashboard Project */}
+      <div className="glass-card p-6 rounded-2xl">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+          <div>
+            <h3 className="font-bold text-lg text-primary">
+              Fleet Sales Dashboard Power BI
+            </h3>
+            <p className="text-xs text-slate-400 font-medium">Toyota Astra Motor Internship Project | Power BI</p>
+          </div>
+        </div>
+        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
+          Dashboard ini dirancang untuk memantau performa penjualan Fleet Toyota secara detail. Fokus utamanya adalah memberikan visualisasi terhadap pencapaian target penjualan, perbandingan performa antar periode, serta analisis mendalam terhadap segmen pelanggan dan model kendaraan.
+        </p>
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Power BI</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analytics</span>
+          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Visualization</span>
+        </div>
+        
+        {/* PDF Viewer */}
+        <div className="mt-6">
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+              Portfolio Documentation
+            </h4>
+            <a
+              href="/Adhitama - Portofolio_Project_Power_BI_Fleet_Sales_Dashboard copy.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              Open PDF
+            </a>
+          </div>
+          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <iframe 
+              src="/Adhitama - Portofolio_Project_Power_BI_Fleet_Sales_Dashboard copy.pdf"
+              className="w-full h-full"
+              title="Toyota Fleet Sales Dashboard PDF"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Power BI Dashboard Embed */}
       <div className="glass-card p-6 rounded-2xl">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
