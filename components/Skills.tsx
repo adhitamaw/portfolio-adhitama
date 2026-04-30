@@ -1,23 +1,28 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./Skills.module.css";
+
 const programmingLanguages = [
   "Python",
   "SQL",
   "Golang",
   "PHP",
-  "C++",
 ];
 
 const dataAnalytics = [
-  "EDA",
-  "Data Cleaning & Preprocessing",
+  "Exploratory Data Analysis (EDA)",
+  "Data Cleaning",
+  "Data Preprocessing",
   "Predictive Analytics",
-  "Power BI",
-  "Data Visualization",
+  "Reporting",
+  "Excel",
 ];
 
-const businessAnalytics = [
-  "KPI Analysis",
-  "Business Reporting",
-  "Data Visualization",
+const dataVisualization = [
+  "Power BI",
+  "Dashboard Development",
+  "Data Storytelling",
 ];
 
 const databaseManagement = [
@@ -27,14 +32,14 @@ const databaseManagement = [
 
 const dataEngineering = [
   "Data Pipeline Development",
+  "ETL",
+  "Data Scraping",
   "REST API Integration",
 ];
 
 const webDevelopment = [
   "Laravel",
-  "Go (Golang)",
-  "RESTful API Design",
-  "JWT Authentication",
+  "Golang",
 ];
 
 const developmentTools = [
@@ -43,137 +48,113 @@ const developmentTools = [
 ];
 
 const languages = [
-  "Indonesian (Native)",
-  "English (Professional)",
+  "English",
+  "Indonesia",
 ];
 
 export default function Skills() {
+  const { t } = useLanguage();
+
   return (
-    <section id="skills" className="space-y-8 scroll-mt-24">
-      <div className="flex items-center gap-4">
-        <span className="material-symbols-outlined text-primary text-3xl">
-          psychology
-        </span>
-        <h2 className="text-2xl font-bold">Skills &amp; Expertise</h2>
+    <section id="skills" className={styles.section}>
+      <div className="section-header">
+        <span className="section-icon material-symbols-outlined">psychology</span>
+        <h2 className="section-title">{t("skills.title")}</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Programming Languages */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">code</span>
-            Programming & Data Processing
+      <div className={styles.grid}>
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">code</span>
+            {t("skills.categories.tools")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {programmingLanguages.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+              <span key={skill} className="pop-badge pop-badge-blue">{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Data Analytics & Visualization */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">analytics</span>
-            Data & Analytics
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">analytics</span>
+            {t("skills.categories.data")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {dataAnalytics.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+              <span key={skill} className="pop-badge pop-badge-red">{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Business Analytics */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">bar_chart</span>
-            Business Analytics
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">bar_chart</span>
+            {t("skills.categories.viz")}
           </p>
-          <div className="flex flex-wrap gap-2">
-            {businessAnalytics.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+          <div className={styles.skillTags}>
+            {dataVisualization.map((skill) => (
+              <span key={skill} className="pop-badge pop-badge-yellow" style={{color: "var(--pop-black)"}}>{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Database Management */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">storage</span>
-            Database
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">storage</span>
+            {t("skills.categories.db")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {databaseManagement.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+              <span key={skill} className="pop-badge pop-badge-blue">{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Data Engineering */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">hub</span>
-            Data Engineering
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">hub</span>
+            {t("skills.categories.eng")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {dataEngineering.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+              <span key={skill} className="pop-badge pop-badge-magenta">{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Web Development & APIs */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-primary mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">api</span>
-            Web & Backend
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">api</span>
+            {t("skills.categories.web")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {webDevelopment.map((skill) => (
-              <span key={skill} className="glass-pill px-3 py-1.5 rounded-lg text-xs">
-                {skill}
-              </span>
+              <span key={skill} className="pop-badge pop-badge-red">{skill}</span>
             ))}
           </div>
         </div>
 
-        {/* Development Tools */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-accent mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">build</span>
-            Development Tools
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">build</span>
+            {t("skills.categories.dev")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {developmentTools.map((tool) => (
-              <span key={tool} className="glass-pill-purple px-3 py-1.5 rounded-lg text-xs">
-                {tool}
-              </span>
+              <span key={tool} className="pop-badge pop-badge-blue">{tool}</span>
             ))}
           </div>
         </div>
 
-        {/* Languages */}
-        <div className="glass-card p-6 rounded-2xl">
-          <p className="text-xs font-bold text-accent mb-4 uppercase tracking-tighter flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">translate</span>
-            Languages
+        <div className={styles.skillCard}>
+          <p className={styles.skillTitle}>
+            <span className="material-symbols-outlined">translate</span>
+            {t("skills.categories.lang")}
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className={styles.skillTags}>
             {languages.map((lang) => (
-              <span key={lang} className="glass-pill-purple px-3 py-1.5 rounded-lg text-xs">
-                {lang}
-              </span>
+              <span key={lang} className="pop-badge pop-badge-magenta">{lang}</span>
             ))}
           </div>
         </div>

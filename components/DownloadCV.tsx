@@ -1,17 +1,23 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./DownloadCV.module.css";
+
 export default function DownloadCV() {
+  const { t } = useLanguage();
+
   return (
-    <div className="pt-8">
-      <a 
-        href="/CV_ADHITAMA_WICHAKSONO_Professional.pdf"
-        download="CV_ADHITAMA_WICHAKSONO_Professional.pdf"
-        className="w-full md:w-auto flex items-center justify-center gap-3 glass-pill px-8 py-5 rounded-2xl font-bold text-white hover:bg-primary transition-all group overflow-hidden relative"
+    <div className={styles.wrapper}>
+      <a
+        href="/CV_Adhitama Wichaksono ATS.pdf"
+        download="CV_Adhitama Wichaksono ATS.pdf"
+        className={styles.downloadBtn}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span className="relative z-10 material-symbols-outlined">
-          download
+        <span className="material-symbols-outlined">
+          file_download
         </span>
-        <span className="relative z-10">Download Full Curriculum Vitae</span>
-        <span className="relative z-10 material-symbols-outlined group-hover:translate-x-1 transition-transform">
+        {t("cv.button")}
+        <span className="material-symbols-outlined">
           arrow_forward
         </span>
       </a>

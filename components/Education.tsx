@@ -1,3 +1,8 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./Education.module.css";
+
 interface EducationItem {
   degree: string;
   institution: string;
@@ -29,52 +34,39 @@ const educationItems: EducationItem[] = [
 ];
 
 export default function Education() {
+  const { t } = useLanguage();
+
   return (
-    <section id="education" className="space-y-8 scroll-mt-24">
-      <div className="flex items-center gap-4">
-        <span className="material-symbols-outlined text-primary text-3xl">
-          school
-        </span>
-        <h2 className="text-2xl font-bold">Education</h2>
+    <section id="education" className={styles.section}>
+      <div className="section-header">
+        <span className="section-icon material-symbols-outlined">school</span>
+        <h2 className="section-title">{t("edu.title")}</h2>
       </div>
 
-      <div className="space-y-6">
+      <div className={styles.list}>
         {educationItems.map((item, index) => (
-          <div
-            key={index}
-            className="glass-card p-6 rounded-2xl group"
-          >
-            <div className="flex items-start gap-6 mb-4">
-              <div className="size-16 rounded-xl glass-card flex items-center justify-center p-3 grayscale group-hover:grayscale-0 transition-all flex-shrink-0">
-                <span
-                  className={`material-symbols-outlined text-4xl ${
-                    item.iconColor === "primary" ? "text-primary" : "text-accent"
-                  }`}
-                >
-                  {item.icon}
-                </span>
+          <div key={index} className={styles.card}>
+            <div className={styles.cardBody}>
+              <div className={styles.iconBox}>
+                <span className="material-symbols-outlined">{item.icon}</span>
               </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-base">{item.degree}</h3>
-                <p className="text-sm text-slate-400 mb-1">
-                  {item.institution}
-                </p>
-                <p className="text-xs text-slate-500">
-                  {item.year} | {item.gpa}
-                </p>
+              <div className={styles.degreeInfo}>
+                <h3 className={styles.degreeName}>{item.degree}</h3>
+                <p className={styles.institution}>{item.institution}</p>
+                <p className={styles.meta}>{item.year} | {item.gpa}</p>
               </div>
             </div>
             {item.coursework && (
-              <div className="ml-[88px]">
-                <h4 className="text-xs font-bold text-slate-400 uppercase mb-3">Relevant Coursework</h4>
-                <ul className="space-y-2">
+              <div className={styles.coursework}>
+                <h4 className={styles.courseworkTitle}>Relevant Coursework</h4>
+                <div className={styles.courseworkList}>
                   {item.coursework.map((course, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                      <span className="text-primary mt-0.5 flex-shrink-0">•</span>
+                    <div key={idx} className={styles.courseItem}>
+                      <span className={styles.courseBullet}>•</span>
                       <span>{course}</span>
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
           </div>

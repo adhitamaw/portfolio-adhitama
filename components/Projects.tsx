@@ -1,3 +1,8 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./Projects.module.css";
+
 interface Project {
   title: string;
   description: string;
@@ -11,7 +16,7 @@ const projects: Project[] = [
   {
     title: "SPPD (Surat Perintah Perjalanan Dinas) Mobile – BP Batam",
     description:
-      "Official duty travel management system developed using Flutter, integrated with a PHP backend and MySQL database. Designed to streamline official travel administration processes, including SPPD creation, companion management, and travel expense calculation.",
+      "A Flutter-based mobile travel order management system integrated with a PHP backend and MySQL database, designed to streamline business trip administration including SPPD creation, companion management, and travel cost calculation.",
     technologies: ["Flutter", "PHP", "MySQL", "REST API"],
     year: "2024",
     type: "BP Batam Internship Project",
@@ -38,278 +43,244 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const { t } = useLanguage();
+  const repoProjects = t("projects.items") as any[];
+
   return (
-    <section id="projects" className="space-y-8 scroll-mt-24">
-      <div className="flex items-center gap-4">
-        <span className="material-symbols-outlined text-primary text-3xl">
-          folder_special
-        </span>
-        <h2 className="text-2xl font-bold">Projects</h2>
+    <section id="projects" className={styles.section}>
+      <div className="section-header">
+        <span className="section-icon material-symbols-outlined">folder_special</span>
+        <h2 className="section-title">{t("projects.title")}</h2>
       </div>
 
-      {/* Toyota Internship Power BI Dashboard Project */}
-      <div className="glass-card p-6 rounded-2xl">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+      <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
           <div>
-            <h3 className="font-bold text-lg text-primary">
-              Fleet Sales Dashboard Power BI
-            </h3>
-            <p className="text-xs text-slate-400 font-medium">Toyota Astra Motor Internship Project | Power BI</p>
+            <h3 className={styles.projectTitle}>{repoProjects[0].title}</h3>
+            <p className={styles.projectType}>Toyota Astra Motor Internship Project | Power BI</p>
           </div>
         </div>
-        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
-          Dashboard ini dirancang untuk memantau performa penjualan Fleet Toyota secara detail. Fokus utamanya adalah memberikan visualisasi terhadap pencapaian target penjualan, perbandingan performa antar periode, serta analisis mendalam terhadap segmen pelanggan dan model kendaraan.
+        <p className={styles.projectDesc}>
+          {repoProjects[0].desc}
         </p>
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Power BI</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analytics</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Visualization</span>
+        <div className={styles.tags}>
+          <span className="pop-badge pop-badge-blue">Microsoft Power BI</span>
+          <span className="pop-badge pop-badge-red">Data Analytics</span>
+          <span className="pop-badge pop-badge-magenta">Data Visualization</span>
         </div>
-        
-        {/* PDF Viewer */}
-        <div className="mt-6">
-          <div className="flex items-center justify-between mb-3">
-            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+
+        <div className={styles.pdfSection}>
+          <div className={styles.pdfHeader}>
+            <h4 className={styles.pdfTitle}>
+              <span className="material-symbols-outlined">picture_as_pdf</span>
               Portfolio Documentation
             </h4>
             <a
               href="/Adhitama - Portofolio_Project_Power_BI_Fleet_Sales_Dashboard copy.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.pdfMobileLink}
             >
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              <span className="material-symbols-outlined" style={{fontSize: 16}}>open_in_new</span>
               Open PDF
             </a>
           </div>
-          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
-            <iframe 
+          <div className={styles.pdfViewer}>
+            <iframe
               src="/Adhitama - Portofolio_Project_Power_BI_Fleet_Sales_Dashboard copy.pdf"
-              className="w-full h-full"
               title="Toyota Fleet Sales Dashboard PDF"
             />
           </div>
         </div>
       </div>
 
-      {/* Power BI Dashboard Embed */}
-      <div className="glass-card p-6 rounded-2xl">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+      <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
           <div>
-            <h3 className="font-bold text-lg text-primary">
-              Car Sales Performance Dashboard
-            </h3>
-            <p className="text-xs text-slate-400 font-medium">Data Analytics & Visualization Project | Power BI | 2026</p>
+            <h3 className={styles.projectTitle}>Car Sales Performance Dashboard</h3>
+            <p className={styles.projectType}>Data Analytics & Visualization Project | Power BI | 2026</p>
           </div>
         </div>
-        <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingBottom: '56.25%' }}>
-          <iframe 
-            title="Car Sales Dashboard" 
-            src="https://app.powerbi.com/view?r=eyJrIjoiZGZhNzdhZTMtODRkYi00ZDE2LTljZTMtZDQ1MzRlY2M0NzZiIiwidCI6IjkwYWZmZTBmLWMyYTMtNDEwOC1iYjk4LTZjZWI0ZTk0ZWYxNSIsImMiOjEwfQ%3D%3D" 
-            className="absolute top-0 left-0 w-full h-full border-0 rounded-xl"
+        <div className={styles.embedWrapper} style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            title="Car Sales Dashboard"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZGZhNzdhZTMtODRkYi00ZDE2LTljZTMtZDQ1MzRlY2M0NzZiIiwidCI6IjkwYWZmZTBmLWMyYTMtNDEwOC1iYjk4LTZjZWI0ZTk0ZWYxNSIsImMiOjEwfQ%3D%3D"
             allowFullScreen={true}
           />
         </div>
-        <div className="mt-4 mb-4">
-          <ul className="space-y-2">
-            <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
-              <span className="text-primary mt-1 flex-shrink-0">•</span>
-              <span>Built comprehensive Power BI dashboard tracking total sales, revenue, customer metrics, and trend analysis</span>
-            </li>
-            <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
-              <span className="text-primary mt-1 flex-shrink-0">•</span>
-              <span>Implemented dynamic filters and drill-down capabilities for granular performance insights across regions and time periods</span>
-            </li>
-          </ul>
+        <div className={styles.featureList}>
+          <div className={styles.featureItem}>
+            <span className={styles.featureBullet}>•</span>
+            <span>Built comprehensive Power BI dashboard tracking total sales, revenue, customer metrics, and trend analysis</span>
+          </div>
+          <div className={styles.featureItem}>
+            <span className={styles.featureBullet}>•</span>
+            <span>Implemented dynamic filters and drill-down capabilities for granular performance insights across regions and time periods</span>
+          </div>
         </div>
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Power BI</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Excel</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Critical Thinking</span>
+        <div className={styles.tags}>
+          <span className="pop-badge pop-badge-blue">Microsoft Power BI</span>
+          <span className="pop-badge pop-badge-red">Python</span>
+          <span className="pop-badge pop-badge-yellow">Microsoft Excel</span>
+          <span className="pop-badge pop-badge-magenta">Critical Thinking</span>
         </div>
-        
-        {/* PDF Viewer */}
-        <div className="mt-6">
-          <div className="flex items-center justify-between mb-3">
-            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+
+        <div className={styles.pdfSection}>
+          <div className={styles.pdfHeader}>
+            <h4 className={styles.pdfTitle}>
+              <span className="material-symbols-outlined">picture_as_pdf</span>
               Portfolio Documentation
             </h4>
             <a
               href="/Data Analyst Car Sales Portofolio_compressed.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.pdfMobileLink}
             >
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              <span className="material-symbols-outlined" style={{fontSize: 16}}>open_in_new</span>
               Open PDF
             </a>
           </div>
-          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
-            <iframe 
+          <div className={styles.pdfViewer}>
+            <iframe
               src="/Data Analyst Car Sales Portofolio_compressed.pdf"
-              className="w-full h-full"
               title="Car Sales Portfolio PDF"
             />
           </div>
         </div>
       </div>
 
-      {/* RevoU Mini Course Project */}
-      <div className="glass-card p-6 rounded-2xl">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+      <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
           <div>
-            <h3 className="font-bold text-lg text-primary">
-              Bakery Sales Data Analysis
-            </h3>
-            <p className="text-xs text-slate-400 font-medium">RevoU Mini Course Project – Intro to Data Analytics | Excel | 2026</p>
+            <h3 className={styles.projectTitle}>Bakery Sales Data Analysis</h3>
+            <p className={styles.projectType}>RevoU Mini Course Project – Intro to Data Analytics | Excel | 2026</p>
           </div>
         </div>
-        <ul className="space-y-2 mb-4">
-          <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
-            <span className="text-primary mt-1 flex-shrink-0">•</span>
-            <span>Analyzed January 2021 bakery transaction data to identify peak sales periods and best-selling product (Traditional Baguette)</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-slate-300 font-sans leading-relaxed">
-            <span className="text-primary mt-1 flex-shrink-0">•</span>
-            <span>Delivered data-driven recommendations to optimize weekend production and improve inventory management to reduce operational waste</span>
-          </li>
-        </ul>
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analytics</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Analysis</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Data Visualization</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Microsoft Excel</span>
-          <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Spreadsheets</span>
+        <div className={styles.featureList}>
+          <div className={styles.featureItem}>
+            <span className={styles.featureBullet}>•</span>
+            <span>Analyzed bakery transaction data for January 2021 to identify peak sales periods and best-selling products</span>
+          </div>
+          <div className={styles.featureItem}>
+            <span className={styles.featureBullet}>•</span>
+            <span>Provided data-driven recommendations to optimize weekend production and improve inventory management to reduce operational waste</span>
+          </div>
         </div>
-        
-        {/* PDF Viewer */}
-        <div className="mt-6">
-          <div className="flex items-center justify-between mb-3">
-            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-lg">picture_as_pdf</span>
+        <div className={styles.tags}>
+          <span className="pop-badge pop-badge-red">Data Analytics</span>
+          <span className="pop-badge pop-badge-blue">Data Analysis</span>
+          <span className="pop-badge pop-badge-magenta">Data Visualization</span>
+          <span className="pop-badge pop-badge-yellow">Microsoft Excel</span>
+          <span className="pop-badge pop-badge-red">Spreadsheets</span>
+        </div>
+
+        <div className={styles.pdfSection}>
+          <div className={styles.pdfHeader}>
+            <h4 className={styles.pdfTitle}>
+              <span className="material-symbols-outlined">picture_as_pdf</span>
               Analysis Documentation
             </h4>
             <a
               href="/Adhitama Wichaksono_Analisis Tren Penjualan Bakery.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.pdfMobileLink}
             >
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              <span className="material-symbols-outlined" style={{fontSize: 16}}>open_in_new</span>
               Open PDF
             </a>
           </div>
-          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
-            <iframe 
+          <div className={styles.pdfViewer}>
+            <iframe
               src="/Adhitama Wichaksono_Analisis Tren Penjualan Bakery.pdf"
-              className="w-full h-full"
               title="Bakery Sales Analysis PDF"
             />
           </div>
         </div>
       </div>
 
-      {/* IEEE Conference Paper */}
-      <div className="glass-card p-6 rounded-2xl">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+      <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
           <div>
-            <h3 className="font-bold text-lg text-primary">
-              Network Anomaly Detection for Intrusion Detection Systems Using Q-Learning and Deep Q-Learning
-            </h3>
-            <p className="text-xs text-slate-400 font-medium">IEEE ICSECS Conference • 2025</p>
+            <h3 className={styles.projectTitle}>Network Anomaly Detection for Intrusion Detection Systems Using Q-Learning and Deep Q-Learning</h3>
+            <p className={styles.projectType}>IEEE ICSECS Conference • 2025</p>
           </div>
         </div>
-        <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
+        <p className={styles.projectDesc}>
           Research evaluating Q-Learning and Deep Q-Learning (DQN) for adaptive network anomaly detection using the UNSW-NB15 dataset. 
           Addressing data imbalance via SMOTE-Tomek, it simulates zero-day scenarios by excluding specific attacks. DQN outperformed 
           Q-Learning, achieving 99.09% accuracy and 0.9918 F1-score. The model demonstrated strong generalization against novel threats 
           with negligible performance drops, proving its effectiveness for securing modern network systems.
         </p>
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-          <div className="flex flex-wrap gap-2">
-            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Python</span>
-            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Machine Learning</span>
-            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">Deep Q-Learning</span>
-            <span className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider">SMOTE-Tomek</span>
+        <div className={styles.links}>
+          <div className={styles.inlineTags}>
+            <span className="pop-badge pop-badge-blue">Python</span>
+            <span className="pop-badge pop-badge-red">Machine Learning</span>
+            <span className="pop-badge pop-badge-magenta">Deep Q-Learning</span>
+            <span className="pop-badge pop-badge-yellow">SMOTE-Tomek</span>
           </div>
-          <div className="flex gap-2">
+          <div className={styles.inlineLinks}>
             <a
               href="https://ieeexplore.ieee.org/document/11279087"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.actionLink}
             >
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
-              View on IEEE Xplore
+              <span className="material-symbols-outlined">open_in_new</span>
+              IEEE Xplore
             </a>
             <a
               href="https://github.com/adhitamaw/Anomaly-Detection-using-Reinforcement-Learning"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.actionLink}
             >
-              <span className="material-symbols-outlined text-sm">code</span>
+              <span className="material-symbols-outlined">code</span>
               GitHub
             </a>
           </div>
         </div>
-        
-        {/* PDF Viewer */}
-        <div className="mt-6">
-          <div className="flex items-center justify-between mb-3">
-            <h4 className="text-sm font-bold text-slate-300 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-lg">slideshow</span>
+
+        <div className={styles.pdfSection}>
+          <div className={styles.pdfHeader}>
+            <h4 className={styles.pdfTitle}>
+              <span className="material-symbols-outlined">slideshow</span>
               Conference Presentation
             </h4>
             <a
               href="/Conference Adhit icsecs 2025 (4)_compressed.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+              className={styles.pdfMobileLink}
             >
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              <span className="material-symbols-outlined" style={{fontSize: 16}}>open_in_new</span>
               Open PDF
             </a>
           </div>
-          <div className="relative w-full overflow-auto rounded-xl border border-white/10 h-[400px] md:h-[600px]" style={{ WebkitOverflowScrolling: 'touch' }}>
-            <iframe 
+          <div className={styles.pdfViewer}>
+            <iframe
               src="/Conference Adhit icsecs 2025 (4)_compressed.pdf"
-              className="w-full h-full"
               title="IEEE ICSECS Conference Paper PDF"
             />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6">
+      <div className={styles.grid}>
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="glass-card p-6 rounded-2xl hover:bg-white/[0.07] transition-all group"
-          >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+          <div key={index} className={styles.miniCard}>
+            <div className={styles.miniCardHeader}>
               <div>
-                <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-xs text-primary font-medium">{project.type}</p>
+                <h3 className={styles.miniCardTitle}>{project.title}</h3>
+                <p className={styles.miniCardType}>{project.type}</p>
               </div>
-              <span className="text-xs text-slate-500 font-bold shrink-0">
-                {project.year}
-              </span>
+              <span className={styles.miniCardYear}>{project.year}</span>
             </div>
-            <p className="text-sm text-slate-400 font-sans leading-relaxed mb-4">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap items-center gap-2">
+            <p className={styles.miniCardDesc}>{project.description}</p>
+            <div className={styles.miniCardFooter}>
               {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="glass-pill-neutral px-2 py-1 rounded text-[10px] uppercase tracking-wider"
-                >
+                <span key={tech} className="pop-badge" style={{background: "#eee", color: "var(--pop-black)"}}>
                   {tech}
                 </span>
               ))}
@@ -318,10 +289,10 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-auto glass-pill px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 hover:bg-primary/20 transition-all"
+                  className={styles.miniCardLink}
                 >
-                  <span className="material-symbols-outlined text-sm">open_in_new</span>
-                  View Project
+                  <span className="material-symbols-outlined">open_in_new</span>
+                  View
                 </a>
               )}
             </div>

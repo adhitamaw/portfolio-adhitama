@@ -10,14 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#256af4",
-        accent: "#9333ea",
-        "background-light": "#f5f6f8",
-        "background-dark": "#0a0c10",
+        "pop-red": "#FF1A1A",
+        "pop-yellow": "#FFD700",
+        "pop-blue": "#0057FF",
+        "pop-magenta": "#FF00FF",
+        "pop-cyan": "#00E5FF",
+        "pop-green": "#39FF14",
+        "pop-black": "#1A1A1A",
+        "pop-white": "#FFFDF0",
+        "pop-cream": "#FFF8E7",
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "sans-serif"],
-        sans: ["var(--font-noto-sans)", "sans-serif"],
+        display: ["Bangers", "Space Grotesk", "sans-serif"],
+        sans: ["Space Grotesk", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.5rem",

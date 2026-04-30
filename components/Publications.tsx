@@ -1,4 +1,8 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
+import styles from "./Publications.module.css";
 
 interface Publication {
   title: string;
@@ -12,40 +16,40 @@ const publications: Publication[] = [
     title: "Network Anomaly Detection for Intrusion Detection Systems Using Q-Learning and Deep Q-Learning",
     publisher: "IEEE ICSECS Conference",
     year: "2025",
-    url: "#",
+    url: "https://ieeexplore.ieee.org/document/11279087",
   },
 ];
 
 export default function Publications() {
+  const { t } = useLanguage();
+
   return (
-    <section className="space-y-6">
-      <div className="flex items-center gap-3">
-        <span className="material-symbols-outlined text-accent text-2xl">
-          menu_book
-        </span>
-        <h3 className="text-xl font-bold">Publications</h3>
+    <section className={styles.section}>
+      <div className="section-header" style={{marginBottom: 16}}>
+        <span className="section-icon material-symbols-outlined" style={{color: "var(--pop-magenta)"}}>menu_book</span>
+        <h2 className="section-title" style={{fontSize: 22}}>{t("pub.title")}</h2>
       </div>
 
-      <ul className="space-y-3">
+      <div className={styles.list}>
         {publications.map((pub, index) => (
-          <li key={index} className="group">
+          <div key={index}>
             <Link
               href={pub.url}
-              className="flex justify-between items-center p-3 rounded-xl hover:bg-white/5 transition-all border border-transparent hover:border-white/10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
             >
-              <div>
-                <p className="text-sm font-medium">{pub.title}</p>
-                <p className="text-[10px] text-slate-500 uppercase font-bold">
-                  {pub.publisher} • {pub.year}
-                </p>
+              <div className={styles.info}>
+                <p className={styles.title}>{pub.title}</p>
+                <p className={styles.publisher}>{pub.publisher} • {pub.year}</p>
               </div>
-              <span className="material-symbols-outlined text-slate-600 group-hover:text-primary group-hover:translate-x-1 transition-all text-xl">
+              <span className={`${styles.arrow} material-symbols-outlined`}>
                 arrow_right_alt
               </span>
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

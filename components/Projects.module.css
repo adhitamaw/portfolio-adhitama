@@ -1,0 +1,321 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.projectCard {
+  background: var(--pop-white);
+  border: 3px solid var(--pop-black);
+  box-shadow: 5px 5px 0 var(--pop-black);
+  padding: 24px;
+  transition: all 0.15s;
+}
+
+.projectCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--pop-black);
+}
+
+.projectHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .projectHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.projectTitle {
+  font-family: "Bangers", "Space Grotesk", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--pop-red);
+  line-height: 1.2;
+}
+
+.projectType {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.projectDesc {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pdfSection {
+  margin-top: 24px;
+}
+
+.pdfHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.pdfTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pop-black);
+}
+
+.pdfTitle span {
+  color: var(--pop-red);
+  font-size: 20px;
+}
+
+.pdfMobileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: var(--pop-yellow);
+  color: var(--pop-black);
+  border: 2px solid var(--pop-black);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+@media (min-width: 768px) {
+  .pdfMobileLink {
+    display: none;
+  }
+}
+
+.pdfMobileLink:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--pop-black);
+}
+
+.pdfViewer {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  border: 2px solid var(--pop-black);
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .pdfViewer {
+    height: 600px;
+  }
+}
+
+.pdfViewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.embedWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid var(--pop-black);
+}
+
+.embedWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.featureBullet {
+  color: var(--pop-red);
+  flex-shrink: 0;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.inlineTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inlineLinks {
+  display: flex;
+  gap: 8px;
+}
+
+.actionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: var(--pop-yellow);
+  color: var(--pop-black);
+  border: 2px solid var(--pop-black);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+.actionLink:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--pop-black);
+}
+
+.actionLink span {
+  font-size: 16px;
+}
+
+.miniCard {
+  background: var(--pop-white);
+  border: 2px solid var(--pop-black);
+  box-shadow: 3px 3px 0 var(--pop-black);
+  padding: 20px;
+  transition: all 0.15s;
+}
+
+.miniCard:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--pop-black);
+}
+
+.miniCardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .miniCardHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.miniCardTitle {
+  font-family: "Bangers", "Space Grotesk", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--pop-black);
+  transition: color 0.15s;
+}
+
+.miniCard:hover .miniCardTitle {
+  color: var(--pop-red);
+}
+
+.miniCardType {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--pop-red);
+}
+
+.miniCardYear {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.miniCardDesc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.miniCardFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.miniCardLink {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: var(--pop-blue);
+  color: white;
+  border: 2px solid var(--pop-black);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+.miniCardLink:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--pop-black);
+}
+
+.miniCardLink span {
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

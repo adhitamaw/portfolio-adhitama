@@ -1,3 +1,8 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./OrganizationalImpact.module.css";
+
 interface ImpactItem {
   title: string;
   role: string;
@@ -7,73 +12,50 @@ interface ImpactItem {
   responsibilities: string[];
 }
 
-const impactItems: ImpactItem[] = [
-  {
-    title: "Carnival HIMAIF (Informatics, Telkom University)",
-    role: "Logistics Division Staff",
-    organization: "HIMAIF (Himpunan Mahasiswa Informatika)",
-    location: "Telkom University",
-    period: "October 2023 — November 2023",
-    responsibilities: [
-      "Managed venue and field permits for a large-scale university carnival event",
-      "Coordinated logistics operations, including equipment procurement, vendor management, and distribution of event materials",
-      "Collaborated with cross-functional committees and external stakeholders to ensure the event was executed on time and within budget"
-    ],
-  },
-  {
-    title: "Batavia On Telkom (Cultural Festival)",
-    role: "Logistics Division Staff",
-    organization: "Telkom University",
-    location: "Telkom University",
-    period: "October 2022 — June 2023",
-    responsibilities: [
-      "Secured venue permits and maintained vendor coordination for a university cultural festival",
-      "Managed procurement and organization of event resources to ensure smooth multi-day operations",
-      "Demonstrated strong teamwork and coordination skills in handling logistics for a major university event"
-    ],
-  },
-];
-
 export default function OrganizationalImpact() {
+  const { t } = useLanguage();
+  const items = t("org.items") as ImpactItem[];
+
+  // Re-map periods and locations as they are consistent across languages
+  const enrichedItems = items.map((item, index) => ({
+    ...item,
+    location: "Telkom University",
+    organization: index === 0 ? "HIMAIF (Himpunan Mahasiswa Informatika)" : "Telkom University",
+    period: index === 0 ? "October 2023 — November 2023" : "October 2022 — June 2023"
+  }));
+
   return (
-    <section className="space-y-10">
-      <div className="flex items-center gap-4">
-        <span className="material-symbols-outlined text-primary text-3xl">
-          volunteer_activism
-        </span>
-        <h2 className="text-2xl font-bold">Leadership & Organizational Experience</h2>
+    <section className={styles.section}>
+      <div className="section-header">
+        <span className="section-icon material-symbols-outlined">volunteer_activism</span>
+        <h2 className="section-title">{t("org.title")}</h2>
       </div>
 
-      <div className="relative pl-8 space-y-12">
-        {/* Timeline Line */}
-        <div className="absolute left-0 top-2 bottom-2 w-px bg-slate-800"></div>
+      <div className={styles.timeline}>
+        <div className={styles.timelineLine}></div>
 
-        {impactItems.map((item, index) => (
-          <div key={index} className="relative group">
-            {/* Timeline Dot */}
-            <div className="absolute -left-10 top-1 size-4 rounded-full border-2 border-slate-700 bg-background-dark group-hover:border-primary transition-colors"></div>
+        {enrichedItems.map((item, index) => (
+          <div key={index} className={styles.item}>
+            <div className={styles.dot}></div>
 
-            {/* Card */}
-            <div className="glass-card p-6 rounded-2xl">
-              <div className="flex justify-between items-start mb-2">
+            <div className={styles.card}>
+              <div className={styles.cardHeader}>
                 <div>
-                  <h3 className="font-bold text-lg">{item.role}</h3>
-                  <p className="text-sm text-primary mt-1">{item.title}</p>
+                  <h3 className={styles.roleTitle}>{item.role}</h3>
+                  <p className={styles.eventTitle}>{item.title}</p>
                 </div>
-                <span className="text-xs text-slate-500 font-bold whitespace-nowrap ml-4">
-                  {item.period}
-                </span>
+                <span className={styles.cardPeriod}>{item.period}</span>
               </div>
-              <p className="text-slate-400 text-sm mb-1">{item.organization}</p>
-              <p className="text-slate-500 text-xs mb-4">{item.location}</p>
-              <ul className="space-y-2">
+              <p className={styles.organization}>{item.organization}</p>
+              <p className={styles.eventLocation}>{item.location}</p>
+              <div className={styles.responsibilities}>
                 {item.responsibilities.map((resp, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs text-slate-300 font-sans leading-relaxed">
-                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                  <div key={idx} className={styles.responsibility}>
+                    <span className={styles.bullet}>•</span>
                     <span>{resp}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         ))}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Noto_Sans } from "next/font/google";
+import { Space_Grotesk, Bangers } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -8,10 +9,10 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
-const notoSans = Noto_Sans({
+const bangers = Bangers({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-noto-sans",
+  weight: ["400"],
+  variable: "--font-bangers",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -35,9 +36,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${notoSans.variable} font-display bg-background-dark text-white antialiased`}
+        className={`${spaceGrotesk.variable} ${bangers.variable} font-sans antialiased ben-day-bg`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

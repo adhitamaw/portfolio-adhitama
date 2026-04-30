@@ -1,60 +1,112 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import styles from "./Header.module.css";
 
 export default function Header() {
+  const { language, setLanguage, t } = useLanguage();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { href: "#skills", label: t("nav.skills") },
+    { href: "#experience", label: t("nav.experience") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#education", label: t("nav.education") },
+  ];
+
   return (
-    <header className="fixed top-0 z-50 w-full px-6 py-4 md:px-12">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between glass-card rounded-full px-8 py-3">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="size-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-            <span className="material-symbols-outlined text-white text-xl">
-              deployed_code
-            </span>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <div className={styles.logo}>
+          <div className={styles.logoIcon}>
+            <span className="material-symbols-outlined">deployed_code</span>
           </div>
-          <span className="text-xl font-bold tracking-tight">Adhitama Profile</span>
+          <span className={styles.logoText}>Adhitama Profile</span>
         </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link
-            href="#education"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Education
-          </Link>
-          <Link
-            href="#experience"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Experience
-          </Link>
-          <Link
-            href="#skills"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Skills
-          </Link>
-          <Link
-            href="#projects"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Projects
-          </Link>
+        <div className={styles.navLinks}>
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className={styles.navLink}>
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* CTA Button */}
-        <a 
-          href="#connect" 
-          className="btn-primary cursor-pointer"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          Connect
-        </a>
+        <div className={styles.actions}>
+          <button
+            onClick={() => setLanguage(language === "en" ? "id" : "en")}
+            className={styles.langToggle}
+            aria-label="Toggle Language"
+          >
+            <span className="material-symbols-outlined">language</span>
+            {language === "en" ? "EN" : "ID"}
+          </button>
+
+          <a
+            href="#connect"
+            className={styles.ctaButton}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            {t("nav.connect")}
+          </a>
+
+          <button
+            type="button"
+            aria-label="Toggle mobile navigation"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className={styles.mobileToggle}
+          >
+            <span className="material-symbols-outlined">
+              {mobileMenuOpen ? "close" : "menu"}
+            </span>
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <div className={styles.mobileMenu}>
+            <div className={styles.mobileMenuInner}>
+              <div className={styles.mobileLangRow}>
+                <button
+                  onClick={() => {
+                    setLanguage(language === "en" ? "id" : "en");
+                    setMobileMenuOpen(false);
+                  }}
+                  className={styles.mobileLangToggle}
+                >
+                  <span className="material-symbols-outlined">language</span>
+                  {language === "en" ? "Switch to Indonesian" : "Ganti ke Inggris"}
+                </button>
+              </div>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={styles.mobileNavLink}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <a
+                href="#connect"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileMenuOpen(false);
+                  document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className={styles.mobileCta}
+              >
+                {t("nav.connect")}
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

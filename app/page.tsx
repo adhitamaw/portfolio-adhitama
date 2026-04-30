@@ -12,23 +12,26 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-mesh">
+    <div className="min-h-screen w-full overflow-x-hidden ben-day-bg">
+      <div className="fixed top-0 left-0 w-full h-1.5 bg-pop-black z-50"></div>
+      <div className="fixed bottom-0 left-0 w-full h-1.5 bg-pop-black z-50"></div>
+      <div className="fixed left-0 top-0 h-full w-1.5 bg-pop-black z-50"></div>
+      <div className="fixed right-0 top-0 h-full w-1.5 bg-pop-black z-50"></div>
+
       <Header />
 
       <main className="mx-auto max-w-7xl px-6 pt-32 pb-20 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Sidebar */}
-          <aside className="lg:col-span-4 space-y-8 sticky top-32">
+          <aside className="lg:col-span-4 lg:sticky lg:top-32">
             <ProfileCard />
           </aside>
 
-          {/* Main Content */}
-          <div className="lg:col-span-8 space-y-16">
-            <Projects />
-            <Education />
-            <Timeline />
-            <OrganizationalImpact />
+          <div className="lg:col-span-8 space-y-24">
             <Skills />
+            <Timeline />
+            <Projects />
+            <OrganizationalImpact />
+            <Education />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <Certifications />

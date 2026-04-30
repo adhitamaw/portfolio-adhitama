@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./Footer.module.css";
 
 const socialLinks = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/adhitama-wichaksono-15b56b199/" },
@@ -7,19 +8,14 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12 px-6">
-      <div className="mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center gap-6 opacity-40">
-        <p className="text-xs tracking-widest uppercase">
-          © {new Date().getFullYear()} Adhitama Wichaksono — All Rights
-          Reserved
+    <footer className={styles.footer}>
+      <div className={styles.inner}>
+        <p className={styles.copyright}>
+          &copy; {new Date().getFullYear()} Adhitama Wichaksono &mdash; All Rights Reserved
         </p>
-        <div className="flex gap-8">
+        <div className={styles.links}>
           {socialLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.url}
-              className="text-xs tracking-widest uppercase hover:text-primary transition-colors"
-            >
+            <Link key={link.name} href={link.url} className={styles.socialLink}>
               {link.name}
             </Link>
           ))}
